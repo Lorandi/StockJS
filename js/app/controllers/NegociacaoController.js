@@ -3,7 +3,7 @@ class NegociacaoController {
   constructor() {
 
     let $ = document.querySelector.bind(document);
-    this._form = $('form')
+    this._form = $('form');
     this._inputData = $('#data');
     this._inputQuantidade = $('#quantidade');
     this._inputValor = $('#valor');
@@ -11,14 +11,14 @@ class NegociacaoController {
     this._listaNegociacoes = new ListaNegociacoes();
     this._negociacoesView = new NegociacoesView($('#negociacoesView'));
     this._negociacoesView.update(this._listaNegociacoes)
-
     
-  }
+
+}
 
   adiciona(event) {
     event.preventDefault();   
     this._listaNegociacoes.adiciona(this._criaNegociacao());    
-    this._limpaFormulario()    
+    this._limpaFormulario()  
   }
 
   _criaNegociacao(){
